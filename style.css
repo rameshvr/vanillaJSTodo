@@ -1,0 +1,83 @@
+body {
+  font-family: "Helvetica Neue", sans-serif;
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+}
+header {
+  overflow: auto;
+  background: rgb(244, 244, 244);
+  border-bottom: 1px solid rgb(232, 231, 231);
+  padding: 1em;
+}
+header .new-todo {
+  padding: 0.5em;
+  width: 80%;
+  float: left;
+}
+header .add-btn {
+  float: right;
+  padding: 0.7em 1em;
+  border: 0;
+  background: #00b701;
+  color: #fff;
+  width: 15%;
+  text-transform: uppercase;
+}
+
+ul {
+  padding: 0;
+  margin: 1em 0 0;
+  height: 100%;
+  /* This timing applies on the way OUT */
+  transition-timing-function: ease-in;
+
+  /* Quick on the way out */
+  transition: 0.2s;
+}
+li {
+  list-style: none;
+  text-align: left;
+  padding: 0.7em 1em;
+  border-bottom: 1px solid #eee;
+  transition: all 0.2s;
+}
+li:hover, li:focus, li:active{
+    background: #eee;
+}
+@keyframes strike {
+  from {
+    text-decoration-color: transparent;
+  }
+  to {
+    text-decoration-color: #000;
+  }
+}
+div.priority{
+    display: inline-block;
+    padding:0 0.2em;
+}
+.star{
+    color: rgb(218, 39, 39);
+}
+span.checked {
+  text-decoration: line-through;
+  animation: strike 1s ease-out;
+}
+.status {
+  margin-right: 0.5em;
+}
+.deleteTodo {
+  float: right;
+  background: rgb(255, 231, 231);
+  padding: 0.5em 1em;
+  border:rgb(249, 203, 203) 1px solid;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: relative;
+  top:-0.3em;
+}
+.done {
+  text-decoration: line-through;
+}
